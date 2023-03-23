@@ -66,6 +66,33 @@ function printAllPairs(n) {
   // O(n) operation inside of an O(n) operation.  ---> O(n*n) == O(n^2) 
 
 
+  // Space Complexity
+
+//   Most primitives (booleans, numbers, undefined, null) are constant space
+// Strings require O(n) space (where n is the string length)
+// Reference types are generally O( n), where n is the length (for arrays) or the number of keys (for objects)
+
+function sum(arr) {
+  let total = 0; // 1 number
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
+  return total;
+}
+
+// here space complexity is O(1) because it takes constant space always
+
+function double(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(2 * arr[i]);
+  }
+  return newArr; // n number
+}
+
+// here space complexity is O(n) because it takes n number of space always
+
+
 
 
 
