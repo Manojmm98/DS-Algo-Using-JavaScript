@@ -1,3 +1,8 @@
+
+// Write a function called sameFrequency.
+//  Given two positive integers, find out if the two numbers have the same frequency of digits.
+
+
 function sameFrequency(num1,num2){
 
     const num1S = String(num1);
