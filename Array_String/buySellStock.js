@@ -13,7 +13,8 @@ var maxProfit = function(prices) {
         if(prices[i]<minVal){
           minVal = prices[i];
         }
-        // after finding the min value check whether we are getting highest profit by        subsctracting every value with min value if we found greater value then update it that is our profit
+        // after finding the min value check whether we are getting highest profit by
+        // subsctracting every value with min value if we found greater value then update it that is our profit
         else if((prices[i]-minVal)> maxProfit){
             maxProfit = prices[i]-minVal;
         }
