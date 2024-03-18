@@ -2,6 +2,9 @@
  * @param {number[]} nums
  * @return {number[]}
  */
+
+// brut force
+
 var rearrangeArray = function(nums) {
     let PosArray=[];
     let NevArray = [];
@@ -25,3 +28,26 @@ var rearrangeArray = function(nums) {
      return nums;
       
   };
+
+
+  // optimal approch
+
+var rearrangeArray = function(nums) {
+
+    // Assume +ve will at 0th index and neg at 1
+        let posIndex = 0 , negIndex = 1;
+        let ansArr = []
+        // put the neg index into ans array then increase its pos by 2 
+        // for pos put pos index into ans array at 0th index and increase its index by 2
+        for(let i=0;i<nums.length;i++){
+            if(nums[i]<0){
+                   ansArr[negIndex] = nums[i];
+                   negIndex  = negIndex+2
+            }
+            else{
+                ansArr[posIndex]  = nums[i];
+                posIndex  = posIndex+2
+            }
+        }
+        return ansArr;
+    };
